@@ -1,11 +1,13 @@
+/* ===============================
+   ARQUIVO: variables.tf
+   =============================== */
 variable "project_id" {
-  type        = string
-  default     = "pipeline-dados-gcp" # Substitua pelo ID do seu projeto GCP
   description = "ID do projeto GCP"
+  type        = string
 }
 
 variable "region" {
+  description = "Região padrão do projeto"
   type        = string
   default     = "us-central1"
-  description = "Região padrão dos recursos"
 }
