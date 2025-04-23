@@ -1,0 +1,2 @@
+# Dependências para Cloud Functions
+google-cloud-storage

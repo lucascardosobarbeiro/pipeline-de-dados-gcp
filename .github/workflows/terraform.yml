@@ -1,0 +1,28 @@
+name: Deploy Infraestrutura e Função
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v2
+
+    - name: Authenticate no GCP
+      uses: google-github-actions/auth@v2
+      with:
+        credentials_json: '${{ secrets.GCLOUD_CREDENTIALS }}'
+
+    - name: Init e Apply Terraform
+      working-directory: infra
+      run: |
+        terraform init
+        terraform apply -auto-approve
