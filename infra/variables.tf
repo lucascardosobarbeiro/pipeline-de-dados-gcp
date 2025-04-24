@@ -3,7 +3,7 @@
    =============================== */
 variable "project_id" {
   description = "ID do projeto GCP"
-  type        = string  
+  type        = string
 }
 
 variable "region" {

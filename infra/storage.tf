@@ -6,4 +6,9 @@ resource "google_storage_bucket" "data_bucket" {
   location      = var.region
   project       = "pipeline-dados-gcp"
   force_destroy = true
+
+  lifecycle {
+    prevent_destroy = true
+    ignore_changes  = [location]
+  }
 }
