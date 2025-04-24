@@ -1,6 +1,4 @@
-Aqui está um README detalhado sobre o projeto de pipeline de dados na GCP, incluindo todas as etapas e configurações que realizamos até agora:
 
----
 
 # Projeto de Pipeline de Dados na GCP
 
